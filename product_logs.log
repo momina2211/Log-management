@@ -1,0 +1,10 @@
+New product is created Id 1 - name shampoo
+Deleted product Id 1 - name shampoo
+New product is created Id 2 - name soap
+Deleted product Id 2 - name soap
+New product is created Id 3 - name oil
+Updated product Id 3 - old name oil new name oil
+Deleted product Id 3 - name oil
+New product is created Id 4 - name soda
+Deleted product Id 4 - name soda
+New product is created Id 5 - name coca cola

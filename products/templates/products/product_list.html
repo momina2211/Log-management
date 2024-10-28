@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <a href="{% url 'product_create' %}">Create New Product</a>
+    <ul>
+        {% for product in products %}
+            <li>
+                {{ product.name }} 
+                <a href="{% url 'product_update' product.pk %}">Edit</a>
+                <form action="{% url 'product_delete' product.pk %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Logs</h2>
+    <ul>
+        {% for log in logs %}
+            <li>{{ log }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
